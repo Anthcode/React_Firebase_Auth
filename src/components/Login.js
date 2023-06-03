@@ -12,7 +12,6 @@ export default function Login() {
   const [isLoging, setIsLoging] = useState(false);
   const [error, setError] = useState('');
 
-
   async function handleGoogle(e) {
     e.preventDefault();
     try {
@@ -25,8 +24,6 @@ export default function Login() {
     }
     setIsLoging(false);
   }
-
-
 
   async function handleRegister(e) {
     e.preventDefault();
@@ -97,7 +94,6 @@ export default function Login() {
           <button className="btn-register" onClick={handleRegister}>
             Register
           </button>
-          
         </form>
 
     </div>
