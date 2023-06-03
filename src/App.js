@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useAuth } from './auth/AuthContext';
+import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import './style.css';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Login from './components/Login';
+import Protected from './components/Protected';
+import UserPage from './components/UserPage';
 
-function App() {
+export default function App() {
+  const { currentUser } = useAuth();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Layout  />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
+            <Route path="user" 
+            element={
+              <Protected currentUser={currentUser}><UserPage /></Protected>
+            } />
+        </Route>
+      </Routes>
     </div>
   );
 }
-
-export default App;
