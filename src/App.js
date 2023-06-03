@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth } from './auth/AuthContext';
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './style.css';
 import Layout from './components/Layout';
 import Home from './components/Home';
