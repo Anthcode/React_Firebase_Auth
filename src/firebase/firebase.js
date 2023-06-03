@@ -1,9 +1,10 @@
-import { initializeApp, getApps, getApp } from 'firebase/app';
+import { initializeApp, getApps} from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getDatabase } from 'firebase/database'
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBHOdn1gsYUBwxZGb-mcq-T4OSHmhaTkBU",
+  apiKey: process.env.REACT_APP_API_KEY,
 
   authDomain: "auth-644f4.firebaseapp.com",
 

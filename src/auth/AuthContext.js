@@ -112,7 +112,8 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      //console.log(user)
+
+      console.log(process.env.REACT_APP_API_KEY)
      // console.log(user.photoURL)
       setLoading(false);
     });
