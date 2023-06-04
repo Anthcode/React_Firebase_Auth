@@ -50,7 +50,7 @@ export default function Menu() {
           to="user"
           style={({ isActive }) => (isActive ? activeStyles : null)}
         >
-          UserPage
+          UserInfo
         </NavLink>   
 
           <NavLink
