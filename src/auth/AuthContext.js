@@ -113,13 +113,12 @@ export function AuthProvider({ children }) {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
 
-     
-     // console.log(user.photoURL)
+      console.log(currentUser)
       setLoading(false);
     });
 
     return unsubscribe;
-  }, []);
+  }, [currentUser]);
 
   const value = {
     currentUser,
