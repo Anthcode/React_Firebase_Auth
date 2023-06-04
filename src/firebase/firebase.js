@@ -6,17 +6,17 @@ import { getDatabase } from 'firebase/database'
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
 
-  authDomain: "auth-644f4.firebaseapp.com",
+  authDomain: process.env.REACT_APP_AUTH,
 
-  databaseURL: "https://auth-644f4-default-rtdb.europe-west1.firebasedatabase.app",
+  databaseURL: process.env.REACT_APP_DATA,
 
-  projectId: "auth-644f4",
+  projectId: process.env.REACT_APP_PROJ,
 
-  storageBucket: "auth-644f4.appspot.com",
+  storageBucket: process.env.REACT_APP_STOR,
 
-  messagingSenderId: "335012110278",
+  messagingSenderId: process.env.REACT_APP_MES,
 
-  appId: "1:335012110278:web:05ef16ae90d6c35705dcc7"
+  appId: process.env.REACT_APP_APPID
 
 };
 

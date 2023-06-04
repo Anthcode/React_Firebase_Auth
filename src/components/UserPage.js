@@ -7,7 +7,7 @@ export default function UserPage() {
   return (
     <div className="userPage">
       <div className="userAvatar">
-        <img src={currentUser.photoURL} />
+        <img src={currentUser.photoURL} alt="useravatar"/>
       <FaUserCircle size={30}/>
       </div>
       <h1>UserPAGE</h1> 
