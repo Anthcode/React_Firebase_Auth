@@ -13,7 +13,7 @@ export default function UserPage() {
       <h1>UserPAGE</h1> 
       <div className="logout">
         <p>
-          Użytkownik jest zalogowany jako <b>{currentUser.email}</b>
+          Użytkownik jest zalogowany jako <b>{currentUser.email?currentUser.email:currentUser.displayName}</b>
         </p>
        <div className="userinfo">
          <ul  style={{fontFamily: 'Droid Sans'}}>
